@@ -10,3 +10,4 @@ bin/stop
 bin/start-worker
 bin/stop-worker
 log/*
+pids/*
