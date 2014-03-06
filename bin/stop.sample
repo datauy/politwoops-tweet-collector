@@ -1,0 +1,4 @@
+#!/bin/sh
+PTC=/home/<username>/politwoops-tweet-collector
+kill -9 `cat $PTC/pids/ptc_client.pid`
+exit 0

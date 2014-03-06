@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 First:
 
-```bash
+```
 cp conf/tweets-client.ini.example conf/tweets-client.ini
 ```
 
@@ -56,3 +56,25 @@ These three scripts all accept the following options:
 * `--loglevel` - Sets the verbosity of logging.
 * `--output` - Destination for log files. 
 * `--restart` - Restart if the script encounters an error that cannot be handled.
+
+# Run As a Service in Linux
+```
+cp bin/start.sample bin/sample
+cp bin/stop.sample bin/stop
+cp bin/start-worker.sample bin/start-worker
+cp bin/stop-worker.sample bin/stop-worker
+```
+
+for each one of these files:
+- edit the project path
+- change mod to executable ```sudo chmod a+x```
+
+copy the files inside service_scripts directory to /etc/init.d
+```
+cp service_scripts/politwoops_tweet_collector.sample /etc/init.d/politwoops_tweet_collector
+cp service_scripts/politwoops_tweet_worker.sample /etc/init.d/politwoops_tweet_worker
+```
+
+for each one of these files:
+- edit the project path
+- change mod to executable ```sudo chmod a+x```

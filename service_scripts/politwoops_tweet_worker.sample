@@ -1,0 +1,25 @@
+#!/bin/sh
+
+PTC=/home/<user>
+
+do_start () {
+  cd $PTC/politwoops-tweet-collector
+  ./bin/start-worker
+}
+
+do_stop () {
+  cd $PTC/politwoops-tweet-collector
+  ./bin/stop-worker
+}
+
+case "$1" in
+  start|stop)
+    do_${1}
+    ;;
+
+  restart|reload|force-reload)
+    do_stop
+    do_start
+    ;;
+esac
+exit 0

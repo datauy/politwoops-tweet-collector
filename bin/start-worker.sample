@@ -1,0 +1,5 @@
+#!/bin/sh
+PTC=/home/<username>/politwoops-tweet-collector
+PYTHONPATH=$PYTHONPATH:$PTC/lib $PTC/bin/politwoops-worker.py --images >> $PTC/log/worker.log 2>> $PTC/log/worker.err &
+echo $! > $PTC/pids/ptc_worker.pid
+exit 0

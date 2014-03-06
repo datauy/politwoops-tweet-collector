@@ -1,0 +1,5 @@
+#!/bin/sh
+PTC=/home/<username>/politwoops-tweet-collector
+PYTHONPATH=$PYTHONPATH:$PTC/lib $PTC/bin/tweets-client.py >> $PTC/log/tweets-client.log 2>> $PTC/log/tweets-client.err &
+echo $! > $PTC/pids/ptc_client.pid
+exit 0
