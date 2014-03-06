@@ -1,3 +1,0 @@
-cd /home/gaba/politwoops-twitter-client
-kill -9 `cat worker.pid`
-exit 0

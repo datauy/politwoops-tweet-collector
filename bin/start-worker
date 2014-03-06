@@ -1,5 +1,0 @@
-#!/bin/sh
-cd /home/gaba/politwoops-twitter-client/
-./bin/politwoops-worker.py -v >>./log/worker.log 2>>./log/worker.err &
-echo $! >./worker.pid
-exit 0
