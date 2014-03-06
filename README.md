@@ -78,3 +78,10 @@ cp service_scripts/politwoops_tweet_worker.sample /etc/init.d/politwoops_tweet_w
 for each one of these files:
 - edit the project path
 - change mod to executable ```sudo chmod a+x```
+
+Now you can start both service for example:
+```
+sudo /etc/init.d/politwoops_tweet_collector start
+```
+
+If you want to set them as daemon to init at boot, you could use chkconfig

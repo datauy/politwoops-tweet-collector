@@ -4,3 +4,7 @@ web/
 /bin/experiment.py
 /*.sql
 .*.swp
+bin/start
+bin/stop
+bin/start-worker
+bin/stop-worker
